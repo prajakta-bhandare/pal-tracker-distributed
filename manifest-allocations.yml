@@ -1,0 +1,10 @@
+applications:
+- name: tracker-allocations
+  path: ./applications/allocations-server/build/libs/allocations-server.jar
+  routes:
+  - route: allocations-pal-prajakta.apps.pikes.pal.pivotal.io
+  memory: 1G
+  instances: 1
+  services:
+  - tracker-allocations-database
+  - tracker-service-registry
