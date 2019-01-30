@@ -17,6 +17,8 @@ import java.util.TimeZone;
 @ComponentScan({"io.pivotal.pal.tracker.allocations", "io.pivotal.pal.tracker.restsupport"})
 public class App {
 
+    @Autowired
+    RestOperations restOperations;
 
     public static void main(String[] args) {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
