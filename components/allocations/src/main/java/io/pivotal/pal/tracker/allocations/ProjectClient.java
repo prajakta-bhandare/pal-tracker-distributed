@@ -1,9 +1,11 @@
 package io.pivotal.pal.tracker.allocations;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestOperations;
 
 public class ProjectClient {
 
+    @Autowired
     private final RestOperations restOperations;
     private final String registrationServerEndpoint;
 

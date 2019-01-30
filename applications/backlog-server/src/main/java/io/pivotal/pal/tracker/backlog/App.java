@@ -1,5 +1,6 @@
 package io.pivotal.pal.tracker.backlog;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,7 +24,7 @@ public class App {
 
     @Bean
     ProjectClient projectClient(
-        RestOperations restOperations,
+         RestOperations restOperations,
         @Value("${registration.server.endpoint}") String registrationEndpoint
     ) {
         return new ProjectClient(restOperations, registrationEndpoint);
